@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-09-2020 a las 06:01:06
+-- Tiempo de generación: 22-09-2020 a las 23:32:25
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.5
 
@@ -30,16 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `recepcionistas` (
   `Id_usuario` int(1) NOT NULL,
   `nombre` varchar(20) NOT NULL,
-  `Password` varchar(8) NOT NULL
+  `Password` varchar(8) NOT NULL,
+  `Turno` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `recepcionistas`
 --
 
-INSERT INTO `recepcionistas` (`Id_usuario`, `nombre`, `Password`) VALUES
-(1, 'Meryl', '16524576'),
-(2, 'Lucero', '45316529');
+INSERT INTO `recepcionistas` (`Id_usuario`, `nombre`, `Password`, `Turno`) VALUES
+(1, 'Meryl', '16524576', 'Mañana'),
+(2, 'Lucero', '45316529', 'Tarde'),
+(3, 'Juan', '98728826', 'Noche');
 
 -- --------------------------------------------------------
 
@@ -66,7 +68,8 @@ CREATE TABLE `registro` (
 
 INSERT INTO `registro` (`Id_cliente`, `dni`, `nombre`, `apellido`, `edad`, `telefono`, `sexo`, `fecha`, `hora`, `comensales`) VALUES
 (1, '73063899', 'Pablo Fernando', 'Chavez', 28, '956378987', 'Masculino', '2020-09-23', '07:21:00', 4),
-(2, '7309862', 'Camila Nicole', 'Carpio Bedregal', 57, '986754679', 'Femenino', '2020-09-16', '15:14:00', 10);
+(2, '7309862', 'Camila Nicole', 'Carpio Bedregal', 57, '986754679', 'Femenino', '2020-09-16', '15:14:00', 10),
+(3, '29388293', 'Katia Molina', 'Garcia', 56, '959327804', 'Femenino', '2020-09-29', '20:30:00', 12);
 
 --
 -- Índices para tablas volcadas
@@ -92,13 +95,13 @@ ALTER TABLE `registro`
 -- AUTO_INCREMENT de la tabla `recepcionistas`
 --
 ALTER TABLE `recepcionistas`
-  MODIFY `Id_usuario` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id_usuario` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `Id_cliente` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id_cliente` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
