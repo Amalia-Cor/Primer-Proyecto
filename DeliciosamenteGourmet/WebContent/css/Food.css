@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+	box-sizing: border-box;	
+}
+body
+{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+
+.container
+{
+	width: 100%;
+	margin: auto;
+}
+.container--flex
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.column
+{
+	width: 100%;
+}
+/* Estilos de Header*/
+header
+{
+	width: 100%;
+	background-color: #f4511e;
+}
+header h1
+{
+	font-size: 1.8em;
+	color: #fff;
+	padding: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-wight: 100;
+	text-align: center;
+}
+/*Estilos del menu*/
+nav{
+	margin-bottom: 0;
+	background-color: #f4511e;
+	z-index: 9999;
+	border: 0;
+	font-size: 12px;
+	line-height: 1.42857143;
+	letter-spacing: 4px;
+	border-radius: 0;
+}
+.icon-menu {
+	display: block;
+	color: black;
+}
+ul
+{
+	position: absolute;
+	top:60px;
+	left:0;
+	width:100%;
+	overflow: hidden;
+  	background-color: #f4511e;
+  	margin: 0;
+  	padding: 0;
+  	list-style: none;
+  	text-align: center;
+  	
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #fff;
+  color: #f4511e;
+  text-decoration:none;
+}
+.login
+{
+	float: right;
+}
+
+/*Panel*/
+body h2
+{
+	font-family: 'Indie Flower', cursive;
+	padding: 30px;
+	text-align: center;
+	font-size: 50px;
+	
+}
+
+.contenedor
+{
+	margin: auto;
+	width: 100%;
+	
+}
+.ver img
+{
+	width: 100%;
+	
+	
+}
+.ver
+{
+	text-align: center;
+	border: 7px solid #fff;
+	margin:5px;
+	position: relative;
+	overflow:hidden;
+	height: 100%;
+	
+}
+.efecto .contenedor .ver .texto{
+	font-family: 'Lobster Two', cursive;
+	position:absolute;
+	top:0;
+	width: 100%;
+	height:100%;
+	text-align:center;
+}
+.ver h3
+{
+	color: #fff;
+	font-size: 18px;
+	padding:10px;
+	background: rgba(255,255,255,0.5);
+	box-shadow:0px 1px 3px rgba(159,141,140,0.5);
+	
+	
+}
+.ver p
+{
+	font-size: 17px;
+	color: #fff;
+	padding:8px 20px;
+
+}
+
+.efecto-columna img
+{
+	transition: all 0.3s ease-in-out;
+}
+.efecto-columna .texto
+{
+	background: #032585;
+	transform: translateX(-550px);
+	transition: all 0.4s ease-in-out;
+	
+}
+.efecto-columna p
+{
+	opacity:0;
+	color: #fff;
+	transition: all 0.2s linear;
+	
+}
+.efecto-columna:hover .texto
+{
+	transform: translateX(0px);
+	
+}
+.efecto-columna:hover p
+{
+	opacity: 1;
+	transition-delay: 0.4s;
+	
+}
+.efecto-columna:hover img
+{
+	transform: translateX(320px);
+	transition-delay: 0.1s;
+	
+}
+.efecto .contenedor
+{
+	display: flex;
+	flex-wrap:wrap;
+	justify-context: center;
+	
+}
+@media(min-width:420px)
+{
+	.ver p
+	{
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.ver h3
+	{
+		font-size: 20px;
+	}
+	
+}
+@media(min-width:530px)
+{
+	.efecto-columna 
+	{
+		width:45%;
+		
+	}
+	.ver p
+	{
+		font-size: 16px;
+		padding: 5px 20px;
+	}
+	
+	
+	
+}
+@media (min-width:768px)
+{
+	.ver p
+	{
+		font-size: 18px;
+		padding: 5px 20px;
+	}
+	
+}
+@media (min-width:1024px)
+{
+	.contenedor
+	{
+		width: 1024px;
+	}
+	.ver p
+	{
+		font-size: 16px;
+		padding: 5px 20px;
+	}
+	.efecto-columna
+	{
+		width: 22%;
+	}
+	
+}
+@media (min-width:1200px)
+{
+	.contenedor
+	{
+		width: 1200px;
+	}
+	
+	
+}
